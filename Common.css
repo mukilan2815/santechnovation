@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 
 *{
     scroll-behavior: smooth;
@@ -17,6 +20,15 @@
 }
 .font-acme{
     font-family: 'Acme', sans-serif;
+}
+.font-montez{
+    font-family: 'Montez', cursive;
+}
+.font-merienda{
+    font-family: 'Merienda', cursive;
+}
+.font-Quattrocento{
+    font-family: 'Quattrocento', serif;
 }
 .animate-spin1 {
     animation: spin 5s linear infinite;
