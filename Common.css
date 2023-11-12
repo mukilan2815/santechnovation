@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+*{
+    scroll-behavior: smooth;
+}
+.font-Josefin{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.font-Bree{
+    font-family: 'Bree Serif', serif;
+}
+.font-rancho{
+    font-family: 'Rancho', cursive;
+}
+.font-acme{
+    font-family: 'Acme', sans-serif;
+}
+.animate-spin1 {
+    animation: spin 5s linear infinite;
+}
+
+
