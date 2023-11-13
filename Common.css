@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 *{
     scroll-behavior: smooth;
 }
@@ -32,6 +33,9 @@
 }
 .font-Quattrocento{
     font-family: 'Quattrocento', serif;
+}
+.font-itim{
+    font-family: 'Itim', cursive;
 }
 .animate-spin1 {
     animation: spin 5s linear infinite;

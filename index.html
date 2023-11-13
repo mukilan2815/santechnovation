@@ -10,6 +10,10 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        * {
+            scrollbar-width: none;
+        }
+
         .custom-container {
             --shine-deg: 45deg;
             position: relative;
@@ -62,13 +66,52 @@
             animation: bounce 2s infinite;
             cursor: pointer;
         }
+
+        .autoscroll img {
+            white-space: nowrap;
+            animation: scrollAnimation 12s linear infinite;
+        }
+
+        @keyframes scrollAnimation {
+            0% {
+                transform: translateX(0%);
+            }
+
+            50% {
+                transform: translateX(-100%);
+                /* Assuming you want to scroll the full width of the container */
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .autoscroll2 img {
+            white-space: nowrap;
+            animation: scrollAnimation1 14s linear infinite;
+        }
+
+        @keyframes scrollAnimation1 {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
     <title>Deyga</title>
 </head>
 
 <body class="bg-slate-50 h-screen">
-    <nav class="flex items-center justify-between p-5">
-        <img src="./Images/deyga.png" alt="deyga" class="w-36 md:w-40 2xl:w-52">
+    <nav class=" flex items-center justify-between p-5">
+        <a href="index.html"><img src="./Images/deyga.png" alt="deyga" class="w-36 md:w-40 2xl:w-52"></a>
         <div class="block lg:hidden">
             <button id="menuBtn" class="focus:outline-none">
                 <i id="icon" class="fas fa-bars"></i>
@@ -76,7 +119,7 @@
         </div>
         <div class="hidden lg:flex lg:items-center lg:justify-end">
             <ul class="flex justify-around">
-                <a href="home.html">
+                <a href="index.html ">
                     <li class="cursor-pointer 2xl:text-xl">Home</li>
                 </a>
                 <a href="#about">
@@ -86,18 +129,18 @@
                     <li class="ml-7 2xl:text-xl cursor-pointer">Products</li>
                 </a>
                 <li class="ml-7 2xl:text-xl cursor-pointer">Offers</li>
-                <li class="ml-7 2xl:text-xl cursor-pointer">Blog</li>
                 <div class="flex mx-14 items-center">
                     <a href="signup.html">
                         <li class="ml-5 2xl:text-xl cursor-pointer">My Account</li>
                     </a>
-                    <i class="fas fa-cart-shopping mx-9 fa-xl cursor-pointer" style="color: #865e3c;"></i>
+                    <a href="singleproduct.html"> <i class="fas fa-cart-shopping mx-9 fa-xl cursor-pointer"
+                            style="color: #865e3c;"></i></a>
                 </div>
             </ul>
         </div>
     </nav>
 
-    <main class="flex justify-between">
+    <main class="snap-y snap-mandatory flex justify-between">
         <div class="leftmain ">
             <div class="flex flex-col justify-between">
                 <div>
@@ -127,52 +170,58 @@
             </div>
         </div>
     </main>
-    <section class="about bg-gray-200 py-24" id="about">
+    <section class="snap-y snap-mandatory about bg-gray-200 py-24" id="about">
         <div class="flex justify-center gap-5">
             <div class="w-3/4">
-                <h1 class="capitalize font-bold font-montez text-3xl text-teal-600 m-5">Why Should You use our
+                <h1 class="capitalize font-bold font-montez text-3xl 2xl:text-4xl z-50 text-teal-600 m-5">Why Should You
+                    use
+                    our
                     products??</h1>
-                <p class="font-Quattrocento m-5 text-justify">Elevate your beauty routine with Deyga's natural skincare.
-                    Crafted with pure ingredients, our
-                    products
-                    promise radiant and healthy skin. Embrace sustainability with eco-friendly packaging and ethical
-                    practices. Tailored to diverse needs, our handcrafted range ensures a luxurious touch. Trust in
-                    transparency; Deyga is your path to a mindful and rejuvenating beauty experience.</p>
+                <img src="leaff.png" alt="leaf" class="w-20 -mt-24 -ml-3 absolute opacity-50">
+                <p class="font-Quattrocento m-5 text-justify 2xl:text-xl">Elevate your beauty routine with Deyga's
+                    natural skincare.
+                    Crafted with pure ingredients, our products promise radiant and healthy skin. Embrace sustainability
+                    with
+                    eco-friendly packaging and ethical practices. Tailored to diverse needs, our handcrafted range
+                    ensures a
+                    luxurious touch. Trust in transparency; Deyga is your path to a mindful and rejuvenating beauty
+                    experience.</p>
             </div>
+
             <div class="flex flex-wrap  justify-center gap-5 ">
                 <div class="flex flex-col w-60 h-fit  transition-all items-center hover:shadow-xl rounded-xl">
                     <img src="uniquefeatureimages/04bc3b7d-1e58-4aa5-a2e1-4a55757db182.svg" alt="logo"
-                        class="w-28 rounded-lg">
+                        class="w-28 2xl:w-36 rounded-lg">
                     <h4 class="text-xl text-center m-2">Sustainable Products</h4>
 
                 </div>
                 <div class="flex flex-col w-60 h-fit  transition-all  items-center hover:shadow-xl rounded-xl">
                     <img src="uniquefeatureimages/166b56de-1b89-42b4-8d3c-6d4aa97970b1.svg" alt="logo"
-                        class="w-28 rounded-lg">
+                        class="w-28 2xl:w-36 rounded-lg">
                     <h4 class="text-xl text-center m-2">Traditional recipes</h4>
 
                 </div>
                 <div class="flex flex-col w-60 h-fit  transition-all  items-center hover:shadow-xl rounded-xl">
                     <img src="uniquefeatureimages/1e1a1979-a23b-4af2-9204-1d1701a069f1.svg" alt="logo"
-                        class="w-28 rounded-lg">
+                        class="w-28 2xl:w-36 rounded-lg">
                     <h4 class="text-xl text-center m-2">100% pure</h4>
 
                 </div>
                 <div class="flex flex-col w-60 h-fit  transition-all  items-center hover:shadow-xl rounded-xl">
                     <img src="uniquefeatureimages/46dd9c10-f11b-4443-bf24-4e0f9848af4f.svg" alt="logo"
-                        class="w-28 rounded-lg">
+                        class="w-28 2xl:w-36 rounded-lg">
                     <h4 class="text-xl text-center m-2">Cruelty free</h4>
 
                 </div>
                 <div class="flex flex-col w-60 h-fit  transition-all  items-center hover:shadow-xl rounded-xl">
                     <img src="uniquefeatureimages/4af20d08-62dd-43ce-a7a1-848bdc177bae.svg" alt="logo"
-                        class="w-28 rounded-lg">
+                        class="w-28 2xl:w-36 rounded-lg">
                     <h4 class="text-xl text-center m-2">Deyga family</h4>
 
                 </div>
                 <div class="flex flex-col w-60 h-fit  transition-all  items-center hover:shadow-xl rounded-xl">
                     <img src="uniquefeatureimages/6ec1397e-7823-4cb9-96fc-f34161f01fd8.svg" alt="logo"
-                        class="w-28 rounded-lg">
+                        class="w-28 2xl:w-36 rounded-lg">
                     <h4 class="text-xl text-center m-2">Handcrafted With Love</h4>
 
                 </div>
@@ -182,10 +231,11 @@
     </section>
 
 
-    <section class="productsection ">
+    <section class="snap-y snap-mandatory productsection ">
         <div class="bg-white border rounded-xl m-4">
             <div class="flex justify-between mx-10 p-5 font-merienda">
-                <h6>Skin Care Products</h6>
+                <h6 class="2xl:text-2xl z-50">Skin Care Products <i class="fa-brands fa-pagelines"
+                        style="color: #2ec27e;"></i></h6>
                 <a href="products.html">
                     <h6 class="cursor-pointer">View More <i class="fa-solid fa-chevron-right"></i></h6>
                 </a>
@@ -243,10 +293,10 @@
         </div>
     </section>
 
-    <section class="productsection ">
+    <section class=" snap-y snap-mandatory productsection ">
         <div class="bg-white border rounded-xl m-4">
             <div class="flex justify-between mx-10 p-5 font-merienda">
-                <h6>Hair Products</h6>
+                <h6 class="text-2xl">Hair Products</h6>
                 <a href="products.html">
                     <h6 class="cursor-pointer">View More <i class="fa-solid fa-chevron-right"></i></h6>
                 </a>
@@ -304,10 +354,11 @@
         </div>
     </section>
 
-    <section class="flex p-5">
-        <div class="w-2/4 m-5">
-            <h3 class="font-glass text-3xl font-extrabold my-3 text-teal-500">get 30% discount</h3>
-            <h6 class="text-justify">Unlock a 30% discount on your favorite Deyga products today! Elevate your skincare
+    <section class="snap-y snap-mandatory discount flex p-5 mt-10">
+        <div class="w-2/4 p-7">
+            <h3 class="font-glass text-4xl font-extrabold my-3 text-teal-500 2xl:text-5xl">get 30% discount</h3>
+            <h6 class="text-justify 2xl:text-xl my-5">Unlock a 30% discount on your favorite Deyga products today!
+                Elevate your skincare
                 with natural goodness
                 at an exclusive
                 discounted price. <span class="font-semibold text-lime-600"> Limited time offer</span> for radiant and
@@ -315,16 +366,246 @@
                 savings.</h6>
         </div>
         <div>
-            <img src="discount.jpeg" alt="discount" class="w-96 border h-64 ml-10">
+            <img src="discount.jpeg" alt="discount" class="w-96 2xl:h-72 2xl:w-3/4 border-2 shadow-md h-64 ml-40">
         </div>
     </section>
 
-<section>
-    <h1>Star-Studded Beauty Chronicles</h1>
-    
-</section>
+    <section class="snap-y snap-mandatory ourhairproduct flex items-center p-5">
+        <div class="w-2/4">
+            <img src="hairgirl.png" alt="hairgirl" class="">
+        </div>
+        <div class="w-2/4">
+            <img src="hairprudct.png" alt="" class="absolute w-20 h-20 ml-44 opacity-80 -mt-6 z-10">
+            <h1 class="text-3xl font-extrabold my-5 font-rancho z-50">Our Hair Products</h1>
+            <p class="font-medium text-justify">Transform your tresses with Deyga's hair care wonders. Our natural and
+                nourishing hair products are
+                crafted
+                to
+                rejuvenate and enhance your locks. From revitalizing hair oils to nutrient-rich masks, Deyga offers a
+                holistic approach
+                to hair wellness. Unveil the secret to luscious, healthy hair – indulge in the goodness of Deyga's
+                haircare
+                essentials
+                today!</p>
+            <div>
+
+            </div>
+        </div>
+    </section>
 
 
+    <section class="snap-y snap-mandatory celebrity scroll-smooth py-8">
+        <h1 class="font-rancho text-3xl flex justify-center m-10">Star-Studded Beauty Chronicles <i
+                class="fa-solid fa-star" style="color: #f5c211;"></i></h1>
+
+        <div class="select-none flex relative">
+            <i class="fa-solid fa-chevron-left  absolute left-0 bg-black h-full md:flex justify-center items-center w-10 opacity-40 hover:opacity-60 transition-all hidden top-1/2 transform -translate-y-1/2 cursor-pointer"
+                onclick="scrollImages('left')" style="color: #2ec27e;"></i>
+
+            <div class="overflow-x-scroll flex items-center mx-auto" id="imageContainer">
+                <img src="heroineimages/Ays.jpg" alt="ays" class="m-5">
+                <img src="heroineimages/gauri.jpg" alt="" class="m-5">
+                <img src="heroineimages/Gene.jpg" alt="" class="m-5">
+                <img src="heroineimages/kajal.jpg" alt="" class="m-5">
+                <img src="heroineimages/Kanika.jpg" alt="" class="m-5">
+                <img src="heroineimages/nabha-natas.jpg" alt="" class="m-5">
+                <img src="heroineimages/sanam.jpg" alt="" class="m-5">
+                <img src="heroineimages/Pbs.jpg" alt="" class="m-5">
+                <img src="heroineimages/surb.jpg" alt="" class="m-5">
+                <img src="heroineimages/Shamna.jpg" alt="" class="m-5">
+            </div>
+
+            <i class="fa-solid fa-angle-right absolute right-0 bg-black h-full flex justify-center items-center hover:opacity-60 transition-all w-10 opacity-40 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                onclick="scrollImages('right')" style="color: #2ec27e;"></i>
+
+        </div>
+
+        <script>
+            function scrollImages(direction) {
+                const container = document.getElementById('imageContainer');
+
+                if (direction === 'left') {
+                    container.scrollLeft -= 100; // Adjust the value as needed
+                } else {
+                    container.scrollLeft += 100; // Adjust the value as needed
+                }
+            }
+        </script>
+    </section>
+
+    <section class="snap-y snap-mandatory bg-white py-10">
+        <h1 class="text-3xl flex justify-center font-itim pb-10">Press Features</h1>
+        <div class="flex overflow-x-scroll h-36 autoscroll">
+            <img src="press/10.webp" alt="">
+            <img src="press/11.webp" alt="">
+            <img src="press/12.webp" alt="">
+            <img src="press/9.webp" alt="">
+            <img src="press/chennai-insider_256ec546-f235-45da-89c9-e3b789a3a4a2.jpg" alt="">
+            <img src="press/dna_c49ee5a3-1e3e-4f3b-a362-5e538d170206.jpg" alt="">
+            <img src="press/ed-times_ffdd238b-0ba7-4d30-bfe0-c6de28f2a4fb.jpg" alt="">
+            <img src="press/Elle.webp" alt="">
+            <img src="press/your_story.webp" alt="">
+            <img src="press/global-spa_56dcd486-0690-456b-aa97-aca044362634.jpg" alt="">
+        </div>
+        <div class="flex overflow-x-scroll h-36 autoscroll2">
+            <img src="press/indian-express_11ff1e2e-df8e-4f88-b3fa-0311c4d75174.webp" alt="">
+            <img src="press/indulge_d15b09d3-fcf6-4c8e-8f06-4c778d8fe8a8.jpg" alt="">
+            <img src="press/mid-day_3e47f9c8-69cd-4426-b8e0-947b4a2cb328.jpg" alt="">
+            <img src="press/the-statesman_fbbec483-ce8d-4453-8f25-b1eb94d8625a.jpg" alt="">
+            <img src="press/the-weekend-leader_9433cf6f-58c5-4e5f-b8f5-adccf2a32e63.jpg" alt="">
+            <img src="press/Untitled_design_1_51dd38c8-6aa0-48ce-926a-ae388ceae3d2.webp" alt="">
+            <img src="press/Untitled_design_2_fc0de9fb-fab8-4d5f-b132-c44fa94335ad.webp" alt="">
+            <img src="press/Untitled_design_3_b9fa04d4-bec5-4331-8296-96e5b613d502.webp" alt="">
+            <img src="press/Untitled_design_53f42260-e1cb-421c-88b1-9a30a83dd131.webp" alt="">
+            <img src="press/yahoolife.webp" alt="">
+        </div>
+    </section>
+
+    <footer class="footer pt-9">
+        <div class="relative mt-16 bg-deep-purple-accent-400">
+            <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-lime-500" preserveAspectRatio="none"
+                viewBox="0 0 1440 54">
+                <path fill="currentColor"
+                    d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z">
+                </path>
+            </svg>
+            <div class="w-full pt-12 bg-gradient-to-t from-lime-700 to-lime-500 p-10">
+                <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
+                    <div class="md:max-w-md lg:col-span-2">
+                        <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
+                            <img src="Images/deyga.png" alt="" class="w-40">
+                        </a>
+                        <div class="mt-4 lg:max-w-sm">
+                            <p class="text-sm text-deep-purple-50">
+                                Thank you for choosing Deyga! We appreciate your trust in our natural cosmetics and
+                                skincare products. At Deyga, we are
+                                committed to providing you with a rejuvenating and mindful beauty experience. Your
+                                support allows us to continue
+                                crafting products that harness the power of organic ingredients, promoting radiant and
+                                healthy skin. We look forward to
+                                being a part of your skincare journey and enhancing your natural beauty.
+                            </p>
+                            <p class="mt-4 text-sm text-deep-purple-50">
+                                Thank you for
+                                being a valued member of the
+                                Deyga family.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+                        <div>
+                            <p class="font-semibold tracking-wide text-teal-accent-400">
+                                Contact
+                            </p>
+                            <ul class="mt-2 space-y-2">
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">+91
+                                        9159305599</a>
+                                </li>
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">enquiry@deyga.in</a>
+                                </li>
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Contact
+                                        us</a>
+                                </li>
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">For
+                                        Corporate Orders:</a>
+                                </li>
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">For
+                                        business@deyga.in</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold tracking-wide text-teal-accent-400">Support</p>
+                            <ul class="mt-2 space-y-2">
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">About
+                                        Us</a>
+                                </li>
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">FAQs</a>
+                                </li>
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Privacy
+                                        Policy</a>
+                                </li>
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Terms
+                                        and Condition</a>
+                                </li>
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Shipping
+                                        & Returns</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold tracking-wide text-teal-accent-400">Sign in to get closer</p>
+                            <ul class="mt-2 space-y-2">
+                                <li>
+                                    <a href="/"
+                                        class="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Subscribe
+                                        to receive updates, access to exclusive deals, and more.
+                                    </a>
+                                </li>
+                                <input type="text" class="p-3 rounded-lg" placeholder="Email">
+                                <button class="p-3 bg-emerald-500 rounded-lg">Subscribe</button>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
+                    <p class="text-sm text-gray-100">
+                        © 2023 Deyga. All rights reserved.
+                    </p>
+                    <div class="flex items-center mt-4 space-x-4 sm:mt-0">
+                        <a href="https://twitter.com/deygaorganics?lang=en"
+                            class="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                                <path
+                                    d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/deyga_organics/?hl=en"
+                            class="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400">
+                            <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+                                <circle cx="15" cy="15" r="4"></circle>
+                                <path
+                                    d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/p/Deyga-Organics-100067458253719/"
+                            class="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                                <path
+                                    d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -350,7 +631,6 @@
                 <li class="mt-3">About Us</li>
             </a>
             <li class="mt-3">Products</li>
-            <li class="mt-3">Blog</li>
             <li class="mt-3">My Account</li>
         </ul>
     </div>
