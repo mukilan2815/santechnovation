@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montez&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
 *{
     scroll-behavior: smooth;
 }
@@ -26,6 +26,9 @@
 }
 .font-merienda{
     font-family: 'Merienda', cursive;
+}
+.font-glass{
+        font-family: 'Glass Antiqua', cursive;
 }
 .font-Quattrocento{
     font-family: 'Quattrocento', serif;
