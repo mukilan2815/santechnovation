@@ -22,25 +22,28 @@
         </div>
         <div class="hidden lg:flex lg:items-center lg:justify-end">
             <ul class="flex justify-around">
-                <a href="index.html">
+                <a href="index.html ">
                     <li class="cursor-pointer 2xl:text-xl">Home</li>
                 </a>
-                <a href="#about">
+                <a href="index.html#about">
                     <li class="ml-7 2xl:text-xl cursor-pointer">About Us</li>
                 </a>
                 <a href="products.html">
                     <li class="ml-7 2xl:text-xl cursor-pointer">Products</li>
                 </a>
-                <li class="ml-7 2xl:text-xl cursor-pointer">Offers</li>
-                <li class="ml-7 2xl:text-xl cursor-pointer">Blog</li>
+                <a href="index.html#offers">
+                    <li class="ml-7 2xl:text-xl cursor-pointer">Offers</li>
+                </a>
                 <div class="flex mx-14 items-center">
                     <a href="signup.html">
                         <li class="ml-5 2xl:text-xl cursor-pointer">My Account</li>
                     </a>
-                    <i class="fas fa-cart-shopping mx-9 fa-xl cursor-pointer" style="color: #865e3c;"></i>
+                    <a href="singleproduct.html"> <i class="fas fa-cart-shopping mx-9 fa-xl cursor-pointer"
+                            style="color: #865e3c;"></i></a>
                 </div>
             </ul>
         </div>
+
     </nav>
     <section class="py-12 sm:py-16">
         <div class="container mx-auto px-4">
@@ -48,7 +51,7 @@
                 <ol role="list" class="flex items-center">
                     <li class="text-left">
                         <div class="-m-1">
-                            <a href="#"
+                            <a href="index.html"
                                 class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800">
                                 Home </a>
                         </div>
@@ -58,7 +61,7 @@
                         <div class="flex items-center">
                             <span class="mx-2 text-gray-400">/</span>
                             <div class="-m-1">
-                                <a href="#"
+                                <a href="products.html"
                                     class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800">
                                     Products </a>
                             </div>
@@ -69,7 +72,7 @@
                         <div class="flex items-center">
                             <span class="mx-2 text-gray-400">/</span>
                             <div class="-m-1">
-                                <a href="#"
+                                <a href="singleproduct.html"
                                     class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800"
                                     aria-current="page"> Charcoal Bath Bar </a>
                             </div>
@@ -189,7 +192,7 @@
                     </div>
 
                     <h2 class="mt-8 text-base text-gray-900">Type</h2>
-                    <div class="mt-3 flex select-none flex-wrap items-center gap-1">
+                    <div class="mt-3 flex select-none flex-wrap items-center gap-1 cursor-pointer">
                         <label class="">
                             <input type="radio" name="type" value="Powder" class="peer sr-only" checked />
                             <p
@@ -197,7 +200,7 @@
                                 Soap</p>
                         </label>
                         <label class="">
-                            <input type="radio" name="type" value="Whole Bean" class="peer sr-only" />
+                            <input type="radio" name="type" value="Whole Bean" class="peer sr-only cursor-pointer" />
                             <p
                                 class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
                                 Gel</p>
@@ -215,19 +218,19 @@
                     <div
                         class="mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
                         <div class="flex items-end">
-                            <h1 class="text-3xl font-bold">$60.50</h1>
-                            <span class="text-base">/month</span>
+                            <h1 class="text-3xl font-bold">₹410.00</h1>
                         </div>
 
-                        <button type="button"
-                            class="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-gray-900 bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-transparent hover:text-black hover:border-gray-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 mr-3 h-5 w-5" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                            </svg>
-                            Add to cart
-                        </button>
+                        <a href="signup.html"> <button type="button"
+                                class="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-gray-900 bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-transparent hover:text-black hover:border-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 mr-3 h-5 w-5" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                </svg>
+                                Add to cart
+                            </button>
+                        </a>
                     </div>
 
                     <ul class="mt-8 space-y-2">
@@ -239,7 +242,7 @@
                                     d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                     class=""></path>
                             </svg>
-                            Free shipping worldwide
+                            Free shipping
                         </li>
 
                         <li class="flex items-center text-left text-sm font-medium text-gray-600">
@@ -273,17 +276,23 @@
                     </div>
 
                     <div class="mt-8 flow-root sm:mt-12">
-                        <h1 class="text-3xl font-bold">Delivered To Your Door</h1>
-                        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia accusantium
-                            nesciunt
-                            fuga.</p>
-                        <h1 class="mt-8 text-3xl font-bold">From the Fine Farms of Brazil</h1>
-                        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam enim
-                            facere.
-                        </p>
-                        <p class="mt-4">Amet consectetur adipisicing elit. Optio numquam enim facere. Lorem ipsum dolor
-                            sit
-                            amet consectetur, adipisicing elit. Dolore rerum nostrum eius facere, ad neque.</p>
+                        <h1 class="text-3xl font-bold">Deep Cleansing Power:</h1>
+                        <p class="mt-4">The Charcoal Bath Bar is a skincare essential designed for a profound cleansing
+                            experience. Infused with activated
+                            charcoal, known for its potent detoxifying properties, this bath bar effectively eliminates
+                            impurities, excess oil, and
+                            toxins from the skin. The deep-cleansing power of activated charcoal makes it an excellent
+                            choice for individuals
+                            seeking a refreshed and revitalized complexion.</p>
+                        <h1 class="mt-8 text-3xl font-bold">Suitable for All Skin Types:</h1>
+                        <p class="mt-4">Crafted with a gentle formula, the Charcoal Bath Bar is suitable for individuals
+                            with varying skin types. Whether you
+                            have oily or acne-prone skin, this bath bar caters to your needs without causing irritation.
+                            Beyond its cleansing
+                            abilities, the bar contains nourishing ingredients that help maintain skin hydration.
+                            Elevate your daily skincare
+                            routine with the Charcoal Bath Bar for a purifying and invigorating bathing experience that
+                            suits all skin types.</p>
                     </div>
                 </div>
             </div>

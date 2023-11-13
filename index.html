@@ -140,42 +140,60 @@
                 </div>
             </ul>
         </div>
-    </nav>
 
-    <main class="snap-y snap-mandatory flex justify-between">
-        <div class="leftmain">
+    </nav>
+    <div id="mobileMenu" class="lg:hidden hidden">
+        <ul class="flex flex-col items-center">
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="#about">
+                <li class="mt-3">About Us</li>
+            </a>
+            <a href="products.html">
+                <li class="mt-3">Products</li>
+            </a>
+            <a href="signup.html">
+                <li class="mt-3">My Account</li>
+            </a>
+        </ul>
+    </div>
+    <main class="Home snap-y snap-mandatory flex justify-between">
+
+        <div class="leftmain max-sm:w-full max-sm:pb-10">
             <div class="flex flex-col justify-between">
                 <div>
-                    <h1 class="md:text-7xl  text-3xl font-rancho mt-10 2xl:text-9xl md:flex-1 m-10">Elevate Your Glow
+                    <h1 class="md:text-7xl text-3xl font-rancho mt-10 2xl:text-9xl md:flex-1 m-10">Elevate
+                        Your Glow
                         with Nature's
                         Touch.</h1>
                     <p
-                        class="md:max-w-2xl w-full 2xl:max-w-9xl 2xl:text-xl m-10 text-justify opacity-50 font-acme font-medium">
-                        Experience the essence of
-                        nature with Deyga, where
+                        class="md:max-w-2xl 2xl:max-w-9xl 2xl:text-xl m-10 text-justify opacity-50 font-acme font-medium">
+                        Experience the essence of nature with Deyga, where
                         beauty
                         meets purity. Our natural cosmetics and
                         skincare unveil a
                         radiant you, harnessing the power of organic ingredients. Pamper your skin with the goodness it
                         deserves, and embrace a
                         journey to timeless beauty, naturally nurtured by Deyga.</p>
-                    <button
-                        class="capitalize custom-container bg-lime-500 py-3 px-6 ml-8 2xl:py-5 2xl:px-10 rounded-full">Know
-                        your
-                        offers</button>
+                    <a href="#offers"> <button
+                            class="capitalize custom-container bg-lime-500 py-3 px-6 ml-8 2xl:py-5 2xl:px-10 rounded-full">Know
+                            your
+                            offers</button></a>
                 </div>
                 <img src="leaf.png" alt="leaf" class="md:w-20 w-10 absolute md:left-3 left-6 mt-4 md:mt-auto">
             </div>
-            <a href="#about"> <i class="fa-solid fa-angles-down fa-2x scroll-arrow mt-20 flex justify-center"></i></a>
+            <a href="#about"> <i
+                    class="fa-solid fa-angles-down fa-2x scroll-arrow mt-6 md:mt-20 flex justify-center"></i></a>
         </div>
-        <div class="rightmain">
+        <div class="rightmain hidden md:block">
             <div>
-                <img src="girlhome.png" alt="girl" class="h-4/5 w-3/4 mt-14 ml-24 flex-1 hidden md:block">
+                <img src="girlhome.png" alt="girl" class="h-4/5 w-3/4 mt-14 ml-24 flex-1">
             </div>
         </div>
     </main>
-    <section class="snap-y snap-mandatory about bg-gray-200 py-24" id="about">
-        <div class="flex justify-center gap-5">
+    <section class="about snap-y snap-mandatory  bg-gray-200 py-24" id="about">
+        <div class="md:flex justify-center gap-5">
             <div class="w-3/4">
                 <h1 class="capitalize font-bold font-montez text-3xl 2xl:text-4xl z-50 text-teal-600 m-5">Why Should You
                     use
@@ -192,7 +210,7 @@
                     experience.</p>
             </div>
 
-            <div class="flex flex-wrap  justify-center gap-5 ">
+            <div class="flex flex-wrap justify-center gap-5 ">
                 <div class="flex flex-col w-60 h-fit  transition-all items-center hover:shadow-xl rounded-xl">
                     <img src="uniquefeatureimages/04bc3b7d-1e58-4aa5-a2e1-4a55757db182.svg" alt="logo"
                         class="w-28 2xl:w-36 rounded-lg">
@@ -235,13 +253,13 @@
     </section>
 
 
-    <section class="snap-y snap-mandatory productsection ">
+    <section class="productsection snap-y snap-mandatory  ">
         <div class="bg-white border rounded-xl m-4">
-            <div class="flex justify-between mx-10 p-5 font-merienda">
-                <h6 class="2xl:text-2xl z-50">Skin Care Products <i class="fa-brands fa-pagelines"
+            <div class="flex justify-between md:mx-10 p-5 font-merienda">
+                <h6 class="2xl:text-2xl max-sm:text-sm z-50">Skin Care Products <i class="fa-brands fa-pagelines"
                         style="color: #2ec27e;"></i></h6>
                 <a href="products.html">
-                    <h6 class="cursor-pointer">View More <i class="fa-solid fa-chevron-right"></i></h6>
+                    <h6 class="cursor-pointer max-sm:text-xs">View More <i class="fa-solid fa-chevron-right"></i></h6>
                 </a>
             </div>
             <div class="flex flex-wrap justify-evenly">
@@ -297,12 +315,12 @@
         </div>
     </section>
 
-    <section class=" snap-y snap-mandatory productsection ">
+    <section class="productsection snap-y snap-mandatory  ">
         <div class="bg-white border rounded-xl m-4">
-            <div class="flex justify-between mx-10 p-5 font-merienda">
-                <h6 class="text-2xl">Hair Products</h6>
+            <div class="flex justify-between md:mx-10 p-5 font-merienda">
+                <h6 class="text-2xl max-sm:text-sm">Hair Products</h6>
                 <a href="products.html">
-                    <h6 class="cursor-pointer">View More <i class="fa-solid fa-chevron-right"></i></h6>
+                    <h6 class="cursor-pointer max-sm:text-xs">View More <i class="fa-solid fa-chevron-right"></i></h6>
                 </a>
             </div>
             <div class="flex flex-wrap justify-evenly">
@@ -358,8 +376,8 @@
         </div>
     </section>
 
-    <section class="snap-y snap-mandatory discount flex p-5 mt-10" id="offers">
-        <div class="w-2/4 p-7">
+    <section class="discount marker:snap-y snap-mandatory  md:flex p-5 mt-10" id="offers">
+        <div class="md:w-2/4 p-7">
             <h3 class="font-glass text-4xl font-extrabold my-3 text-teal-500 2xl:text-5xl">get 30% discount</h3>
             <h6 class="text-justify 2xl:text-xl my-5">Unlock a 30% discount on your favorite Deyga products today!
                 Elevate your skincare
@@ -370,18 +388,21 @@
                 savings.</h6>
         </div>
         <div>
-            <img src="discount.jpeg" alt="discount" class="w-96 2xl:h-72 2xl:w-3/4 border-2 shadow-md h-64 ml-40">
+            <img src="discount.jpeg" alt="discount"
+                class="hidden md:block w-96 2xl:h-72 2xl:w-3/4 border-2 shadow-md h-64 ml-40">
         </div>
     </section>
 
-    <section class="snap-y snap-mandatory ourhairproduct flex items-center p-5">
-        <div class="w-2/4">
+    <section class="ourhairproduct snap-y snap-mandatory  md:flex items-center p-5">
+        <div class="md:w-2/4">
             <img src="hairgirl.png" alt="hairgirl" class="">
         </div>
-        <div class="w-2/4">
-            <img src="hairprudct.png" alt="" class="absolute w-20 h-20 ml-44 opacity-80 -mt-6 z-10">
-            <h1 class="text-3xl font-extrabold my-5 font-rancho z-50">Our Hair Products</h1>
-            <p class="font-medium text-justify">Transform your tresses with Deyga's hair care wonders. Our natural and
+        <div class="md:w-2/4">
+            <img src="hairprudct.png" alt=""
+                class="absolute md:w-20 md:h-20 w-10 h-10 md:ml-44 ml-12 opacity-80 -mt-2 z-10">
+            <h1 class="text-3xl font-extrabold my-5 font-rancho z-50 flex max-sm:justify-center">Our Hair Products</h1>
+            <p class="md:font-medium text-justify">Transform your tresses with Deyga's hair care wonders. Our natural
+                and
                 nourishing hair products are
                 crafted
                 to
@@ -398,28 +419,28 @@
     </section>
 
 
-    <section class="snap-y snap-mandatory celebrity scroll-smooth py-8">
-        <h1 class="font-rancho text-3xl flex justify-center m-10">Star-Studded Beauty Chronicles <i
-                class="fa-solid fa-star" style="color: #f5c211;"></i></h1>
+    <section class="celebrity snap-y snap-mandatory  scroll-smooth py-8">
+        <h1 class="font-rancho text-xl max-sm:m-5 md:text-3xl flex justify-center md:m-10">Star-Studded Beauty
+            Chronicles <i class="fa-solid fa-star" style="color: #f5c211;"></i></h1>
 
         <div class="select-none flex relative">
-            <i class="fa-solid fa-chevron-left  absolute left-0 bg-black h-full md:flex justify-center items-center w-10 opacity-40 hover:opacity-60 transition-all hidden top-1/2 transform -translate-y-1/2 cursor-pointer"
+            <i class="fa-solid fa-chevron-left  absolute left-0 bg-black md:h-full h-80 flex justify-center items-center w-5 md:w-10 opacity-40 hover:opacity-60 transition-all  top-1/2 transform -translate-y-1/2 cursor-pointer"
                 onclick="scrollImages('left')" style="color: #2ec27e;"></i>
 
             <div class="overflow-x-scroll flex items-center mx-auto" id="imageContainer">
-                <img src="heroineimages/Ays.jpg" alt="ays" class="m-5">
-                <img src="heroineimages/gauri.jpg" alt="" class="m-5">
-                <img src="heroineimages/Gene.jpg" alt="" class="m-5">
-                <img src="heroineimages/kajal.jpg" alt="" class="m-5">
-                <img src="heroineimages/Kanika.jpg" alt="" class="m-5">
-                <img src="heroineimages/nabha-natas.jpg" alt="" class="m-5">
-                <img src="heroineimages/sanam.jpg" alt="" class="m-5">
-                <img src="heroineimages/Pbs.jpg" alt="" class="m-5">
-                <img src="heroineimages/surb.jpg" alt="" class="m-5">
-                <img src="heroineimages/Shamna.jpg" alt="" class="m-5">
+                <img src="heroineimages/Ays.jpg" alt="ays" class="m-5 max-sm:w-56">
+                <img src="heroineimages/gauri.jpg" alt="" class="m-5 max-sm:w-56">
+                <img src="heroineimages/Gene.jpg" alt="" class="m-5 max-sm:w-56">
+                <img src="heroineimages/kajal.jpg" alt="" class="m-5 max-sm:w-56">
+                <img src="heroineimages/Kanika.jpg" alt="" class="m-5 max-sm:w-56">
+                <img src="heroineimages/nabha-natas.jpg" alt="" class="m-5 max-sm:w-56">
+                <img src="heroineimages/sanam.jpg" alt="" class="m-5 max-sm:w-56">
+                <img src="heroineimages/Pbs.jpg" alt="" class="m-5 max-sm:w-56">
+                <img src="heroineimages/surb.jpg" alt="" class="m-5 max-sm:w-56">
+                <img src="heroineimages/Shamna.jpg" alt="" class="m-5 max-sm:w-56">
             </div>
 
-            <i class="fa-solid fa-angle-right absolute right-0 bg-black h-full flex justify-center items-center hover:opacity-60 transition-all w-10 opacity-40 top-1/2 transform -translate-y-1/2 cursor-pointer"
+            <i class="fa-solid fa-angle-right absolute right-0 bg-black md:h-full h-80 flex justify-center items-center hover:opacity-60 transition-all w-5 md:w-10 opacity-40 top-1/2 transform -translate-y-1/2 cursor-pointer"
                 onclick="scrollImages('right')" style="color: #2ec27e;"></i>
 
         </div>
@@ -439,7 +460,7 @@
 
     <section class="snap-y snap-mandatory bg-white py-10">
         <h1 class="text-3xl flex justify-center font-itim pb-10">Press Features</h1>
-        <div class="flex overflow-x-scroll h-36 autoscroll">
+        <div class="flex overflow-x-scroll md:h-36 h-20 autoscroll">
             <img src="press/10.webp" alt="">
             <img src="press/11.webp" alt="">
             <img src="press/12.webp" alt="">
@@ -451,7 +472,7 @@
             <img src="press/your_story.webp" alt="">
             <img src="press/global-spa_56dcd486-0690-456b-aa97-aca044362634.jpg" alt="">
         </div>
-        <div class="flex overflow-x-scroll h-36 autoscroll2">
+        <div class="flex overflow-x-scroll md:h-36 h-20 autoscroll2">
             <img src="press/indian-express_11ff1e2e-df8e-4f88-b3fa-0311c4d75174.webp" alt="">
             <img src="press/indulge_d15b09d3-fcf6-4c8e-8f06-4c778d8fe8a8.jpg" alt="">
             <img src="press/mid-day_3e47f9c8-69cd-4426-b8e0-947b4a2cb328.jpg" alt="">
@@ -628,20 +649,7 @@
 
 
 
-    <div id="mobileMenu" class="lg:hidden hidden">
-        <ul class="flex flex-col items-center">
-            <li>Home</li>
-            <a href="home.html">
-                <li class="mt-3">About Us</li>
-            </a>
-            <a href="products.html">
-                <li class="mt-3">Products</li>
-            </a>
-            <a href="signup.html">
-                <li class="mt-3">My Account</li>
-            </a>
-        </ul>
-    </div>
+
     <script>
         const mobileMenu = document.getElementById("mobileMenu");
         const menuBtn = document.getElementById("menuBtn");
